@@ -1,23 +1,23 @@
 public class ContaBancaria {
 
-    // 🔒 Encapsulamento (atributos privados)
+    // Encapsulamento (atributos privados)
     private String titular;
     private double saldo;
 
-    // 🏗 Construtor
+    // Construtor
     public ContaBancaria(String titular, double saldoInicial) {
         this.titular = titular;
         this.saldo = saldoInicial;
     }
 
-    // 💰 Método para depositar
+    // Método para depositar
     public void depositar(double valor) {
         if (valor > 0) {
             saldo += valor;
         }
     }
 
-    // 💸 Método para sacar
+    // Método para sacar
     public boolean sacar(double valor) {
         if (valor > 0 && valor <= saldo) {
             saldo -= valor;
@@ -26,12 +26,12 @@ public class ContaBancaria {
         return false;
     }
 
-    // 📊 Método para consultar saldo
+    // Método para consultar saldo
     public double getSaldo() {
         return saldo;
     }
 
-    // 👤 Getter do titular
+    // Getter do titular
     public String getTitular() {
         return titular;
     }
